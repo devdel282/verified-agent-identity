@@ -2,15 +2,15 @@ name: Verify Human Identity
 
 on:
   workflow_dispatch:
-   inputs:
-     agent_name:
-       description: 'devdel'
-       required: true
-       default: 'devdel'
-      agent_description:
-        description: 'devdel'
-        required: true
-        default: 'devdel AI Agent'
+    inputs:
+      agent_name:
+        description: 'devdel'
+        required: true
+        default: 'devdel'
+       agent_description:
+         description: 'devdel'
+         required: true
+         default: 'devdel AI Agent'
 
 jobs:
   verify:
