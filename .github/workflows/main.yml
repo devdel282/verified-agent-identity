@@ -26,7 +26,13 @@ jobs:
           node-version: '20'
 
       - name: Install ClawHub skill
-        run: npx --yes clawhub@latest install verified-agent-identity --force
+        run: |
+          for i in 1 2 3
+          do
+            npx --yes clawhub@latest install verified-agent-identity --force && break
+            echo "Retry..."
+            sleep 20
+            done
 
       - name: Install script dependencies
         run: cd scripts && npm install
